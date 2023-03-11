@@ -5,7 +5,7 @@ import herobg from '../../../../assets/intro-background.png'
 import { Text, Title } from '../../../../components/Typografy'
 export const HeroContainer = styled.section`
   width: 100%;
-  height: 34rem;
+  min-height: 34rem;
   background: ${({ theme }) => `url(${herobg}) no-repeat center,
       linear-gradient(
         0deg,
