@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { RootLayout } from '../layouts/RootLayout'
-import { Home } from '../pages/Home'
-import { Order } from '../pages/Order'
-
+// LAYOUT
+import { RootLayout } from '@/layouts/RootLayout'
+// PAGES
+import { Home } from '@/pages/Home'
+import { Order } from '@/pages/Order'
 export const WebRoutes = () => {
   return (
     <BrowserRouter>

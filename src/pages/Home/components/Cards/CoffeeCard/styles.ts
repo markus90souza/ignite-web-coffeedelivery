@@ -52,7 +52,7 @@ export const Description = styled(Text)`
 export const Footer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `
 
@@ -63,5 +63,27 @@ export const FooterHeader = styled.div`
 
   p {
     line-height: 0.75rem;
+  }
+`
+export const AddCartContainer = styled.div`
+  width: 7.5rem;
+  display: flex;
+  align-items: center;
+  > button {
+    width: 2.375rem;
+    height: 2.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: ${({ theme }) => theme.colors['base-card']};
+    background-color: ${({ theme }) => theme.colors['brand-purple-dark']};
+    margin-left: 0.3rem;
+    border-radius: 6px;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors['brand-purple']};
+    }
   }
 `

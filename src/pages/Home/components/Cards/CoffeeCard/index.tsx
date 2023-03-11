@@ -1,5 +1,7 @@
-import { Text, Title } from '../../../../../components/Typografy'
-import { FormatMoney } from '../../../../../utils/formatMoney'
+import { InputQuantity } from '@/components/Inputs/InputQuantity'
+import { Text, Title } from '@/components/Typografy'
+import { FormatMoney } from '@/utils/formatMoney'
+import { ShoppingCart } from 'phosphor-react'
 import {
   Container,
   Image,
@@ -8,6 +10,7 @@ import {
   Footer,
   FooterHeader,
   Name,
+  AddCartContainer,
 } from './styles'
 
 export type CoffeeData = {
@@ -33,7 +36,7 @@ export function CoffeeCard({ data }: CoffeeCardProps) {
           <span key={`${tag}-${id}`}>{tag}</span>
         ))}
       </Tags>
-      <Name color="subtitle" size="s" weight={700}>
+      <Name color="subtitle" size="s" weight={700} as={'h3'}>
         {name}
       </Name>
       <Description color="label" size="s">
@@ -46,6 +49,12 @@ export function CoffeeCard({ data }: CoffeeCardProps) {
             {FormatMoney(price)}
           </Title>
         </FooterHeader>
+        <AddCartContainer>
+          <InputQuantity />
+          <button>
+            <ShoppingCart weight="fill" size={22} />
+          </button>
+        </AddCartContainer>
       </Footer>
     </Container>
   )
