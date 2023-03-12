@@ -3,14 +3,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { RootLayout } from '@/layouts/RootLayout'
 // PAGES
 import { Home } from '@/pages/Home'
-import { Order } from '@/pages/Order'
+import { Orders } from '@/pages/Orders'
 export const WebRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/orders" element={<Order />} />
+          <Route path="/pedidos" element={<Orders />} />
         </Route>
       </Routes>
     </BrowserRouter>

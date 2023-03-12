@@ -2,16 +2,10 @@ import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
 import coffeeLogoImg from '@/assets/coffee-delivery-logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
-import { useEffect } from 'react'
 
 export function Header() {
   const cartQuantity = 2
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position.coords.latitude, position.coords.longitude)
-    })
-  }, [])
   return (
     <HeaderContainer>
       <div className="container">
@@ -22,9 +16,9 @@ export function Header() {
         <HeaderButtonsContainer>
           <HeaderButton variant="purple">
             <MapPin size={20} weight="fill" />
-            Porto Alegre, RS
+            Brasilia - DF
           </HeaderButton>
-          <NavLink to="/completeOrder">
+          <NavLink to="/pedidos">
             <HeaderButton variant="yellow">
               {cartQuantity >= 1 && <span>{cartQuantity}</span>}
               <ShoppingCart size={20} weight="fill" />
