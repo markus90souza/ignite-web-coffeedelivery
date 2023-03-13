@@ -1,6 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled.div`
+type InputQuantityProps = {
+  size: 'small' | 'medium'
+}
+
+export const Container = styled.div<InputQuantityProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,7 +12,18 @@ export const Container = styled.div`
   flex: 1;
   border-radius: 6px;
   background-color: ${({ theme }) => theme.colors['base-button']};
-  padding: 0.5rem;
+
+  ${({ size }) =>
+    size === 'medium' &&
+    css`
+      padding: 0.5rem;
+    `}
+
+  ${({ size }) =>
+    size === 'small' &&
+    css`
+      padding: 0.3rem 0.5rem;
+    `}
 
   input {
     width: 100%;
