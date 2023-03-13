@@ -12,3 +12,15 @@ export const OrdersConatainer = styled(Section)`
   display: flex;
   flex-direction: column;
 `
+
+export const TotalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`

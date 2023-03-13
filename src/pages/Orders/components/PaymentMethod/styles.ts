@@ -21,6 +21,7 @@ export const Container = styled.div`
   }
 
   &:hover {
-    background: ${({ theme }) => theme.colors['base-hover']};
+    border-color: ${({ theme }) => theme.colors['brand-purple']};
+    background: ${({ theme }) => theme.colors['brand-purple-light']};
   }
 `
